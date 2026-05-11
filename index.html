@@ -8,20 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@400;500;600&amp;display=swap');
-        
-        body {
-            font-family: 'Inter', system_ui, sans-serif;
-        }
-        
-        .heading {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-weight: 700;
-        }
-
-        .nav-active {
-            color: #8B4513;
-            font-weight: 600;
-        }
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .heading { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; }
     </style>
 </head>
 <body class="bg-[#F8F1E9] text-[#3F2A1E]">
@@ -30,17 +18,15 @@
     <nav class="bg-white border-b border-[#EDE4D8]">
         <div class="max-w-screen-xl mx-auto px-8">
             <div class="flex items-center justify-between h-20">
-                <div class="flex items-center gap-x-3">
-                    <span class="text-2xl font-semibold tracking-tight">Le Saint M</span>
-                </div>
+                <a href="index.html" class="text-2xl font-semibold tracking-tight">Le Saint M</a>
                 
                 <div class="hidden md:flex items-center gap-x-8 text-sm">
-                    <a href="#accueil" class="hover:text-[#8B4513]">Accueil</a>
-                    <a href="#avis" class="hover:text-[#8B4513]">Avis</a>
-                    <a href="#reservation" class="hover:text-[#8B4513]">Réservation</a>
+                    <a href="index.html" class="hover:text-[#8B4513]">Accueil</a>
+                    <a href="menu.html" class="hover:text-[#8B4513]">Menu</a>
+                    <a href="reservation.html" class="hover:text-[#8B4513]">Réservation</a>
                 </div>
 
-                <a href="#reservation" 
+                <a href="reservation.html" 
                    class="px-6 py-2.5 bg-[#8B4513] hover:bg-[#6B3510] transition text-white text-sm font-semibold rounded-full">
                     Réserver
                 </a>
@@ -49,8 +35,7 @@
     </nav>
 
     <!-- HERO -->
-    <section id="accueil" class="relative h-[92vh] flex items-center justify-center overflow-hidden">
-        <!-- Background image -->
+    <section class="relative h-[92vh] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 bg-cover bg-center" 
              style="background-image: url('https://picsum.photos/id/1018/2000/1200')">
             <div class="absolute inset-0 bg-black/30"></div>
@@ -59,29 +44,25 @@
         <div class="relative z-10 text-center px-6 max-w-3xl">
             <div class="text-[#F8F1E9] text-sm tracking-[3px] mb-3">SAINT-MARTIN-DE-CRAU • PROVENCE</div>
             
-            <h1 class="text-white text-7xl md:text-7xl leading-none tracking-tighter heading mb-4">
-                Le Saint M
-            </h1>
+            <h1 class="text-white text-7xl leading-none tracking-tighter heading mb-4">Le Saint M</h1>
             
             <p class="text-white/90 text-lg max-w-md mx-auto mb-8">
                 « Une cuisine raffinée, une belle terrasse ombragée, une déco moderne et lumineuse — un tiercé gagnant. »
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#menu" 
+                <a href="menu.html" 
                    class="px-8 py-3.5 bg-[#D97757] hover:bg-[#C25F3F] transition text-white font-semibold rounded-full text-sm">
                     DÉCOUVRIR LA CARTE
                 </a>
-                <a href="#reservation" 
+                <a href="reservation.html" 
                    class="px-8 py-3.5 border border-white text-white hover:bg-white hover:text-[#3F2A1E] transition font-semibold rounded-full text-sm">
                     RÉSERVER UNE TABLE
                 </a>
             </div>
 
             <div class="mt-8 flex justify-center items-center gap-x-2 text-white/80 text-sm">
-                <div class="flex text-amber-400">
-                    ★★★★☆
-                </div>
+                <div class="flex text-amber-400">★★★★☆</div>
                 <span>4,7/5 — 681 avis Google</span>
             </div>
         </div>
@@ -99,76 +80,15 @@
                     <p>Au Saint M, Sophie et Damien vous accueillent dans une ambiance familiale et chaleureuse. Notre cuisine française, faite maison, met à l’honneur les produits frais et de saison du terroir provençal.</p>
                     <p>Notre menu change chaque semaine au gré des inspirations du chef et des arrivages du marché.</p>
                 </div>
-                <p class="mt-6 italic text-sm">« Le menu change toutes les semaines, le cuisinier est extra. » — Élodie</p>
             </div>
-
             <div class="rounded-2xl overflow-hidden shadow-lg">
                 <img src="https://picsum.photos/id/1015/900/700" class="w-full h-full object-cover" alt="Intérieur du restaurant">
             </div>
         </div>
     </section>
 
-    <!-- MENU / PLATS SIGNATURE -->
-    <section id="menu" class="bg-white py-16">
-        <div class="max-w-screen-xl mx-auto px-8">
-            <div class="text-center mb-10">
-                <div class="text-[#8B4513] text-xs tracking-[2px] font-semibold">À LA CARTE</div>
-                <h2 class="heading text-4xl mt-1">Nos plats signature</h2>
-                <p class="text-sm text-[#5C4635] mt-1">Carte évolutive selon les saisons et les arrivages du marché</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                <!-- Plat 1 -->
-                <div>
-                    <img src="https://picsum.photos/id/292/600/420" class="rounded-2xl w-full aspect-[4/3] object-cover mb-4" alt="Filet de bœuf aux morilles">
-                    <div class="font-semibold">Filet de bœuf aux morilles</div>
-                    <div class="text-sm text-[#5C4635]">Sauce aux champignons des bois, panais glacés et lardons fumés</div>
-                </div>
-
-                <!-- Plat 2 -->
-                <div>
-                    <img src="https://picsum.photos/id/312/600/420" class="rounded-2xl w-full aspect-[4/3] object-cover mb-4" alt="Suprême de volaille">
-                    <div class="font-semibold">Suprême de volaille aux morilles</div>
-                    <div class="text-sm text-[#5C4635]">Crème de morilles, frites de panais maison</div>
-                </div>
-
-                <!-- Plat 3 -->
-                <div>
-                    <img src="https://picsum.photos/id/1060/600/420" class="rounded-2xl w-full aspect-[4/3] object-cover mb-4" alt="Quenelle de veau">
-                    <div class="font-semibold">Quenelle de veau</div>
-                    <div class="text-sm text-[#5C4635]">Sauce suprême, écrasé de pommes de terre et carottes fanes</div>
-                </div>
-            </div>
-
-            <!-- DESSERTS -->
-            <div class="mt-16">
-                <div class="text-center mb-8">
-                    <h3 class="heading text-3xl">Les desserts maison</h3>
-                </div>
-                
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div>
-                        <img src="https://picsum.photos/id/201/600/400" class="rounded-2xl w-full aspect-video object-cover mb-3" alt="Éclair revisité">
-                        <div class="font-semibold">Éclair revisité au café</div>
-                        <div class="text-sm text-[#5C4635]">Mousse café, meringues vanillées et caramel beurre salé</div>
-                    </div>
-                    <div>
-                        <img src="https://picsum.photos/id/292/600/400" class="rounded-2xl w-full aspect-video object-cover mb-3" alt="Sablé breton">
-                        <div class="font-semibold">Sablé breton aux fraises</div>
-                        <div class="text-sm text-[#5C4635]">Fraises de Provence, chantilly basilic et coulis de fruits rouges</div>
-                    </div>
-                    <div>
-                        <img src="https://picsum.photos/id/312/600/400" class="rounded-2xl w-full aspect-video object-cover mb-3" alt="Tiramisu">
-                        <div class="font-semibold">Tiramisu en verrine</div>
-                        <div class="text-sm text-[#5C4635]">Le grand classique italien, crème mascarpone et cacao amer</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- AVIS -->
-    <section id="avis" class="max-w-screen-xl mx-auto px-8 py-16">
+    <section class="max-w-screen-xl mx-auto px-8 py-16">
         <div class="text-center mb-10">
             <div class="text-[#8B4513] text-xs tracking-[2px] font-semibold">ILS EN PARLENT</div>
             <h2 class="heading text-4xl mt-1">4,7 ★ sur 681 avis</h2>
@@ -189,39 +109,6 @@
                 <div class="flex text-amber-400 mb-3">★★★★★</div>
                 <p class="text-sm">« Une belle terrasse, une décoration moderne et lumineuse, avec des plats raffinés et un service attentionné. »</p>
                 <div class="mt-4 text-sm font-medium">Client Google</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- RÉSERVATION -->
-    <section id="reservation" class="bg-[#3F2A1E] text-white py-16">
-        <div class="max-w-screen-xl mx-auto px-8">
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Texte réservation -->
-                <div>
-                    <div class="text-[#C9A17A] text-xs tracking-[2px] font-semibold mb-2">RÉSERVATION</div>
-                    <h2 class="heading text-5xl tracking-tight mb-6">Réservez votre table</h2>
-                    <p class="text-[#C9A17A] mb-8">Pour le déjeuner, le dîner ou une table en terrasse, contactez-nous directement par téléphone.</p>
-
-                    <div class="space-y-1 text-sm">
-                        <div><span class="text-[#C9A17A]">TÉLÉPHONE :</span> <a href="tel:0490473245" class="font-medium">04 90 47 32 45</a></div>
-                        <div><span class="text-[#C9A17A]">ADRESSE :</span> 6 Avenue de la République, 13310 Saint-Martin-de-Crau</div>
-                    </div>
-                </div>
-
-                <!-- Horaires -->
-                <div class="bg-white/10 rounded-2xl p-8">
-                    <div class="font-semibold mb-4">Horaires d’ouverture</div>
-                    <table class="w-full text-sm">
-                        <tr><td class="py-1">Lundi</td><td class="text-right text-[#C9A17A]">Fermé</td></tr>
-                        <tr><td class="py-1">Mardi</td><td class="text-right text-[#C9A17A]">Fermé</td></tr>
-                        <tr><td class="py-1">Mercredi</td><td class="text-right">12h00 – 14h00</td></tr>
-                        <tr><td class="py-1">Jeudi</td><td class="text-right">12h00 – 14h00 / 19h30 – 22h00</td></tr>
-                        <tr><td class="py-1">Vendredi</td><td class="text-right">12h00 – 14h00 / 19h30 – 22h00</td></tr>
-                        <tr><td class="py-1">Samedi</td><td class="text-right">12h00 – 14h00 / 19h30 – 22h00</td></tr>
-                        <tr><td class="py-1">Dimanche</td><td class="text-right">12h00 – 14h00</td></tr>
-                    </table>
-                </div>
             </div>
         </div>
     </section>
