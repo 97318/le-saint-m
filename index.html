@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Saint M • Restaurant Saint-Martin-de-Crau</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@400;500;600&amp;display=swap');
+        
+        :root {
+            --primary: #8B4513;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+            margin: 0;
+            background: #f8f5f0;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        
+        header {
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://picsum.photos/id/1016/2000/1200') center/cover no-repeat;
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero-content h1 {
+            font-size: 4.5rem;
+            margin: 0 0 16px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 32px;
+            opacity: 0.95;
+        }
+        
+        .btn {
+            background: #8B4513;
+            color: white;
+            padding: 16px 36px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #6B3410;
+            transform: translateY(-2px);
+        }
+        
+        section {
+            padding: 80px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 50px;
+            color: #2c2c2c;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+        
+        .reviews {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+        
+        .review {
+            border-bottom: 1px solid #eee;
+            padding: 25px 0;
+        }
+        
+        .review:last-child {
+            border-bottom: none;
+        }
+        
+        footer {
+            background: #2c2c2c;
+            color: #ddd;
+            text-align: center;
+            padding: 50px 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO -->
+    <header>
+        <div class="hero-content">
+            <h1>Le Saint M</h1>
+            <p>Restaurant • Bar • Terrasse ombragée<br>
+            Saint-Martin-de-Crau</p>
+            <a href="#reservation" class="btn">Réserver une table</a>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="container">
+        <h2 class="section-title">Bienvenue au Saint M</h2>
+        <p style="max-width: 700px; margin: 0 auto; text-align: center; font-size: 1.25rem;">
+            Un restaurant familial au cœur de la Provence. 
+            Cuisine raffinée, terrasse ombragée et accueil chaleureux.
+        </p>
+    </section>
+
+    <!-- GALLERY -->
+    <section style="background: white;">
+        <div class="container">
+            <h2 class="section-title">La Terrasse &amp; l'Intérieur</h2>
+            <div class="gallery">
+                <img src="https://picsum.photos/id/1016/800/600" alt="Terrasse extérieure">
+                <img src="https://picsum.photos/id/1018/800/600" alt="Intérieur du restaurant">
+                <img src="https://picsum.photos/id/106/800/600" alt="Terrasse ombragée">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOD GALLERY -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Nos Plats Signature</h2>
+            <div class="gallery">
+                <img src="https://picsum.photos/id/292/800/600" alt="Dessert signature">
+                <img src="https://picsum.photos/id/312/800/600" alt="Plat principal">
+                <img src="https://picsum.photos/id/201/800/600" alt="Dessert au chocolat">
+                <img src="https://picsum.photos/id/292/800/600" alt="Pavlova aux fraises">
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="container">
+        <div class="reviews">
+            <h2 class="section-title" style="margin-bottom: 30px;">Avis Google — 4,7/5 (681 avis)</h2>
+            
+            <div class="review">
+                <strong>Elodie</strong> — 5/5<br>
+                <span style="color:#666;">« Rien à dire, ce restaurant est très agréable. Le menu change toutes les semaines, le cuisinier est extra. »</span>
+            </div>
+            
+            <div class="review">
+                <strong>Michele H</strong> — 5/5<br>
+                <span style="color:#666;">« Cuisine excellente et accueil vraiment sympathique. »</span>
+            </div>
+            
+            <div class="review" style="border-bottom: none;">
+                <strong>Petit Futé</strong><br>
+                <span style="color:#666;">« Plats raffinés, belle terrasse, déco moderne et lumineuse, accueil des plus sympathiques. »</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESERVATION -->
+    <section id="reservation" style="background: #f8f5f0;">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">Réservez votre table</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 30px;">
+                📞 <strong>04 90 47 32 45</strong><br>
+                Ouvert du mardi au dimanche • Fermé le lundi
+            </p>
+            <a href="tel:0490473245" class="btn">Appeler maintenant</a>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>Le Saint M</strong> — 6 Avenue de la République, 13310 Saint-Martin-de-Crau</p>
+        <p>© 2026 — Restaurant familial en Provence</p>
+    </footer>
+
+</body>
+</html>
