@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation • Le Saint M</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@400;500;600&amp;display=swap');
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .heading { font-family: 'Playfair Display', Georgia, serif; }
+    </style>
+</head>
+<body class="bg-[#F8F1E9] text-[#3F2A1E]">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b border-[#EDE4D8]">
+        <div class="max-w-screen-xl mx-auto px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="text-2xl font-semibold tracking-tight">Le Saint M</a>
+                <div class="flex items-center gap-x-8 text-sm">
+                    <a href="index.html" class="hover:text-[#8B4513]">Accueil</a>
+                    <a href="menu.html" class="hover:text-[#8B4513]">Menu</a>
+                    <a href="reservation.html" class="font-semibold text-[#8B4513]">Réservation</a>
+                </div>
+                <a href="reservation.html" class="px-6 py-2.5 bg-[#8B4513] text-white text-sm font-semibold rounded-full">Réserver</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-screen-xl mx-auto px-8 py-12">
+        <div class="max-w-2xl mx-auto">
+            <div class="text-center mb-10">
+                <div class="text-[#8B4513] text-xs tracking-[2px] font-semibold">RÉSERVATION</div>
+                <h1 class="heading text-5xl mt-2">Réservez votre table</h1>
+                <p class="text-[#5C4635] mt-3">Pour le déjeuner, le dîner ou une table en terrasse, contactez-nous directement.</p>
+            </div>
+
+            <!-- Formulaire simple -->
+            <div class="bg-white p-8 rounded-2xl border border-[#EDE4D8] mb-10">
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-sm mb-1.5">Nom</label>
+                            <input type="text" class="w-full border border-[#EDE4D8] rounded-xl px-4 py-3" placeholder="Votre nom">
+                        </div>
+                        <div>
+                            <label class="block text-sm mb-1.5">Téléphone</label>
+                            <input type="tel" class="w-full border border-[#EDE4D8] rounded-xl px-4 py-3" placeholder="06 XX XX XX XX">
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <label class="block text-sm mb-1.5">Date &amp; Heure souhaitée</label>
+                        <input type="text" class="w-full border border-[#EDE4D8] rounded-xl px-4 py-3" placeholder="Ex: Samedi 15 février à 20h00">
+                    </div>
+                    <div class="mt-5">
+                        <label class="block text-sm mb-1.5">Nombre de personnes</label>
+                        <input type="number" class="w-full border border-[#EDE4D8] rounded-xl px-4 py-3" placeholder="2">
+                    </div>
+                    <div class="mt-5">
+                        <label class="block text-sm mb-1.5">Message (optionnel)</label>
+                        <textarea class="w-full border border-[#EDE4D8] rounded-xl px-4 py-3 h-24" placeholder="Table en terrasse si possible..."></textarea>
+                    </div>
+                    <button type="button" 
+                            class="mt-6 w-full bg-[#8B4513] hover:bg-[#6B3510] text-white py-4 rounded-full font-semibold">
+                        Envoyer ma demande de réservation
+                    </button>
+                </form>
+            </div>
+
+            <!-- Infos pratiques -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-[#EDE4D8]">
+                    <div class="font-semibold mb-3">Contact direct</div>
+                    <div class="space-y-1 text-sm">
+                        <div><strong>Téléphone :</strong> <a href="tel:0490473245" class="text-[#8B4513]">04 90 47 32 45</a></div>
+                        <div><strong>Mobile :</strong> 06 24 23 77 51</div>
+                        <div><strong>Adresse :</strong> 6 Av. de la République, 13310 Saint-Martin-de-Crau</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-[#EDE4D8]">
+                    <div class="font-semibold mb-3">Horaires d’ouverture</div>
+                    <table class="w-full text-sm">
+                        <tr><td class="py-0.5">Lundi &amp; Mardi</td><td class="text-right text-[#8B4513]">Fermé</td></tr>
+                        <tr><td class="py-0.5">Mercredi</td><td class="text-right">12h – 14h</td></tr>
+                        <tr><td class="py-0.5">Jeudi au Samedi</td><td class="text-right">12h – 14h / 19h30 – 22h</td></tr>
+                        <tr><td class="py-0.5">Dimanche</td><td class="text-right">12h – 14h</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-[#2C2118] text-[#C9A17A] text-center py-6 text-xs mt-12">
+        © 2026 Le Saint M • Saint-Martin-de-Crau
+    </footer>
+</body>
+</html>
