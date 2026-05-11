@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avis • Le Saint M</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@400;500;600&amp;display=swap');
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .heading { font-family: 'Playfair Display', Georgia, serif; }
+    </style>
+</head>
+<body class="bg-[#F8F1E9] text-[#3F2A1E]">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b border-[#EDE4D8]">
+        <div class="max-w-screen-xl mx-auto px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="text-2xl font-semibold tracking-tight">Le Saint M</a>
+                
+                <div class="hidden md:flex items-center gap-x-8 text-sm">
+                    <a href="index.html" class="hover:text-[#8B4513]">Accueil</a>
+                    <a href="menu.html" class="hover:text-[#8B4513]">Menu</a>
+                    <a href="avis.html" class="font-semibold text-[#8B4513]">Avis</a>
+                    <a href="reservation.html" class="hover:text-[#8B4513]">Réservation</a>
+                </div>
+
+                <a href="reservation.html" 
+                   class="px-6 py-2.5 bg-[#8B4513] hover:bg-[#6B3510] transition text-white text-sm font-semibold rounded-full">
+                    Réserver
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-screen-xl mx-auto px-8 py-12">
+        
+        <!-- Header -->
+        <div class="text-center mb-10">
+            <div class="text-[#8B4513] text-xs tracking-[2px] font-semibold">ILS EN PARLENT</div>
+            <h1 class="heading text-5xl mt-2">Tous nos avis</h1>
+            <div class="flex justify-center items-center gap-x-3 mt-4">
+                <div class="flex text-amber-400 text-2xl">★★★★☆</div>
+                <div>
+                    <span class="text-3xl font-semibold">4,7</span>
+                    <span class="text-[#5C4635]">/5</span>
+                </div>
+            </div>
+            <p class="text-[#5C4635] mt-1">Basé sur <strong>681 avis Google</strong> + avis TripAdvisor</p>
+        </div>
+
+        <!-- Boutons liens externes -->
+        <div class="flex flex-wrap justify-center gap-4 mb-10">
+            <a href="https://www.google.com/search?q=Le+saint+M+Saint-Martin-de-Crau" target="_blank"
+               class="flex items-center gap-x-2 px-5 py-2.5 bg-white border border-[#EDE4D8] rounded-full text-sm hover:bg-[#F8F1E9]">
+                <i class="fab fa-google text-[#8B4513]"></i>
+                <span>Voir tous les avis Google</span>
+            </a>
+            <a href="https://www.tripadvisor.fr/Restaurant_Review-g1183348-d3365736-Reviews-Le_Saint_M-Saint_Martin_de_Crau_Bouches_du_Rhone_Provence_Alpes_Cote_d_Azur.html" target="_blank"
+               class="flex items-center gap-x-2 px-5 py-2.5 bg-white border border-[#EDE4D8] rounded-full text-sm hover:bg-[#F8F1E9]">
+                <i class="fab fa-tripadvisor text-[#8B4513]"></i>
+                <span>Voir sur TripAdvisor</span>
+            </a>
+        </div>
+
+        <!-- AVIS GOOGLE -->
+        <div class="mb-12">
+            <div class="flex items-center gap-x-3 mb-6">
+                <i class="fab fa-google text-xl text-[#8B4513]"></i>
+                <h2 class="heading text-2xl">Avis Google <span class="text-base font-normal text-[#5C4635]">(681 avis)</span></h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                
+                <!-- Avis 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-[#EDE4D8]">
+                    <div class="flex text-amber-400 mb-3">★★★★★</div>
+                    <p class="text-sm">« Rien à dire, ce restaurant est très agréable. Le menu change toutes les semaines, le cuisinier est extra. »</p>
+                    <div class="mt-4 text-sm"><strong>Élodie</strong> — Avis Google</div>
+                </div>
+
+                <!-- Avis 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-[#EDE4D8]">
+                    <div class="flex text-amber-400 mb-3">★★★★★</div>
+                    <p class="text-sm">« Cuisine excellente et accueil vraiment sympathique. Une très belle découverte que nous recommandons sans hésiter. »</p>
+                    <div class="mt-4 text-sm"><strong>Michele H</strong> — Avis Google</div>
+                </div>
+
+                <!-- Avis 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-[#EDE4D8]">
+                    <div class="flex text-amber-400 mb-3">★★★★★</div>
+                    <p class="text-sm">« Une belle terrasse, une décoration moderne et lumineuse, avec des plats raffinés et un service attentionné. »</p>
+                    <div class="mt-4 text-sm"><strong>Client Google</strong> — Avis Google</div>
+                </div>
+
+                <!-- Avis 4 -->
+                <div class="bg-white p-6 rounded-2xl border border-[#EDE4D8]">
+                    <div class="flex text-amber-400 mb-3">★★★★★</div>
+                    <p class="text-sm">« Très bon moment en famille, une ambiance chaleureuse et une cuisine gourmande qui donne envie de revenir. »</p>
+                    <div class="mt-4 text-sm"><strong>Client Google</strong> — Avis Google</div>
+                </div>
+
+                <!-- Avis 5 -->
+                <div class="bg-white p-6 rounded-2xl border border-[#EDE4D8]">
+                    <div class="flex text-amber-400 mb-3">★★★★☆</div>
+                    <p class="text-sm">« Très bon restaurant, service rapide et plats de qualité. Nous y retournerons avec plaisir. »</p>
+                    <div class="mt-4 text-sm"><strong>Jean-Pierre L.</strong> — Avis Google</div>
+                </div>
+
+                <!-- Avis 6 -->
+                <div class="bg-white p-6 rounded-2xl border border-[#EDE4D8]">
+                    <div class="flex text-amber-400 mb-3">★★★★★</div>
+                    <p class="text-sm">« Le cadre est magnifique, surtout en terrasse. La cuisine est raffinée sans être prétentieuse. Bravo ! »</p>
+                    <div class="mt-4 text-sm"><strong>Sophie M.</strong> — Avis Google</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- AVIS TRIPADVISOR -->
+        <div>
+            <div class="flex items-center gap-x-3 mb-6">
+                <i class="fab fa-tripadvisor text-xl text-[#8B4513]"></i>
+                <h2 class="heading text-2xl">Avis TripAdvisor</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                
+                <div class="bg-white p-6 rounded-2xl border border-[#EDE4D8]">
+                    <div class="flex text-amber-400 mb-3">★★★★★</div>
+                    <p class="text-sm">« Excellent restaurant provençal. Accueil chaleureux, cuisine de qualité et belle terrasse ombragée. Nous recommandons vivement ! »</p>
+                    <div class="mt-4 text-sm"><strong>Marie D.</strong> — TripAdvisor</div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-[#EDE4D8]">
+                    <div class="flex text-amber-400 mb-3">★★★★☆</div>
+                    <p class="text-sm">« Très bon repas, service impeccable. Les plats sont bien présentés et savoureux. Cadre agréable. »</p>
+                    <div class="mt-4 text-sm"><strong>Philippe R.</strong> — TripAdvisor</div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-[#EDE4D8]">
+                    <div class="flex text-amber-400 mb-3">★★★★★</div>
+                    <p class="text-sm">« Un vrai coup de cœur ! Ambiance familiale, cuisine maison de qualité et produits frais. Nous reviendrons. »</p>
+                    <div class="mt-4 text-sm"><strong>Isabelle T.</strong> — TripAdvisor</div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-[#EDE4D8]">
+                    <div class="flex text-amber-400 mb-3">★★★★★</div>
+                    <p class="text-sm">« Superbe découverte à Saint-Martin-de-Crau. Terrasse très agréable et plats délicieux. Service attentionné. »</p>
+                    <div class="mt-4 text-sm"><strong>Laurent B.</strong> — TripAdvisor</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="text-center mt-10">
+            <a href="https://www.google.com/search?q=Le+saint+M+Saint-Martin-de-Crau" target="_blank"
+               class="inline-flex items-center gap-x-2 px-6 py-3 bg-[#8B4513] text-white rounded-full text-sm font-semibold hover:bg-[#6B3510]">
+                Laisser un avis sur Google
+            </a>
+        </div>
+
+    </div>
+
+    <footer class="bg-[#2C2118] text-[#C9A17A] text-center py-6 text-xs mt-8">
+        © 2026 Le Saint M • Saint-Martin-de-Crau
+    </footer>
+
+</body>
+</html>
