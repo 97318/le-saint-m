@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu • Le Saint M</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@400;500;600&amp;display=swap');
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .heading { font-family: 'Playfair Display', Georgia, serif; }
+    </style>
+</head>
+<body class="bg-[#F8F1E9] text-[#3F2A1E]">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b border-[#EDE4D8]">
+        <div class="max-w-screen-xl mx-auto px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="text-2xl font-semibold tracking-tight">Le Saint M</a>
+                <div class="flex items-center gap-x-8 text-sm">
+                    <a href="index.html" class="hover:text-[#8B4513]">Accueil</a>
+                    <a href="menu.html" class="font-semibold text-[#8B4513]">Menu</a>
+                    <a href="reservation.html" class="hover:text-[#8B4513]">Réservation</a>
+                </div>
+                <a href="reservation.html" class="px-6 py-2.5 bg-[#8B4513] text-white text-sm font-semibold rounded-full">Réserver</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-screen-xl mx-auto px-8 py-12">
+        <div class="text-center mb-10">
+            <div class="text-[#8B4513] text-xs tracking-[2px] font-semibold">À LA CARTE</div>
+            <h1 class="heading text-5xl mt-2">Notre Carte</h1>
+            <p class="text-[#5C4635] mt-2">Carte évolutive selon les saisons et les arrivages du marché</p>
+        </div>
+
+        <!-- PLATS SIGNATURE -->
+        <h2 class="heading text-3xl mb-6">Nos plats signature</h2>
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+            <div>
+                <img src="https://picsum.photos/id/292/600/420" class="rounded-2xl w-full mb-4" alt="Filet de bœuf">
+                <div class="font-semibold text-lg">Filet de bœuf aux morilles</div>
+                <div class="text-sm text-[#5C4635]">Sauce aux champignons des bois, panais glacés et lardons fumés</div>
+            </div>
+            <div>
+                <img src="https://picsum.photos/id/312/600/420" class="rounded-2xl w-full mb-4" alt="Suprême de volaille">
+                <div class="font-semibold text-lg">Suprême de volaille aux morilles</div>
+                <div class="text-sm text-[#5C4635]">Crème de morilles, frites de panais maison</div>
+            </div>
+            <div>
+                <img src="https://picsum.photos/id/1060/600/420" class="rounded-2xl w-full mb-4" alt="Quenelle de veau">
+                <div class="font-semibold text-lg">Quenelle de veau</div>
+                <div class="text-sm text-[#5C4635]">Sauce suprême, écrasé de pommes de terre et carottes fanes</div>
+            </div>
+        </div>
+
+        <!-- DESSERTS -->
+        <h2 class="heading text-3xl mb-6">Les desserts maison</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div>
+                <img src="https://picsum.photos/id/201/600/400" class="rounded-2xl w-full mb-4" alt="Éclair">
+                <div class="font-semibold text-lg">Éclair revisité au café</div>
+                <div class="text-sm text-[#5C4635]">Mousse café, meringues vanillées et caramel beurre salé</div>
+            </div>
+            <div>
+                <img src="https://picsum.photos/id/292/600/400" class="rounded-2xl w-full mb-4" alt="Sablé">
+                <div class="font-semibold text-lg">Sablé breton aux fraises</div>
+                <div class="text-sm text-[#5C4635]">Fraises de Provence, chantilly basilic et coulis</div>
+            </div>
+            <div>
+                <img src="https://picsum.photos/id/312/600/400" class="rounded-2xl w-full mb-4" alt="Tiramisu">
+                <div class="font-semibold text-lg">Tiramisu en verrine</div>
+                <div class="text-sm text-[#5C4635]">Crème mascarpone et cacao amer</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-[#2C2118] text-[#C9A17A] text-center py-6 text-xs mt-12">
+        © 2026 Le Saint M • Saint-Martin-de-Crau
+    </footer>
+</body>
+</html>
