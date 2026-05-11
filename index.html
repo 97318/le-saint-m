@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le Saint M • Restaurant Saint-Martin-de-Crau</title>
+    <title>Le Saint M • Restaurant • Saint-Martin-de-Crau</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@400;500;600&amp;display=swap');
         
@@ -13,205 +15,361 @@
         
         body {
             font-family: 'Inter', system_ui, sans-serif;
-            margin: 0;
-            background: #f8f5f0;
-            color: #333;
-            line-height: 1.6;
         }
         
-        h1, h2 {
+        .heading-serif {
             font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
         }
-        
-        header {
-            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://picsum.photos/id/1016/2000/1200') center/cover no-repeat;
-            height: 100vh;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            padding: 0 20px;
-        }
-        
-        .hero-content h1 {
-            font-size: 4.5rem;
-            margin: 0 0 16px;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.5);
-        }
-        
-        .hero-content p {
-            font-size: 1.5rem;
-            margin-bottom: 32px;
-            opacity: 0.95;
-        }
-        
-        .btn {
-            background: #8B4513;
-            color: white;
-            padding: 16px 36px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-        
-        .btn:hover {
-            background: #6B3410;
-            transform: translateY(-2px);
-        }
-        
-        section {
-            padding: 80px 20px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
+
         .section-title {
-            text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 50px;
-            color: #2c2c2c;
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+        }
+
+        .nav-link {
+            transition: all 0.2s ease;
         }
         
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 20px;
+        .nav-link:hover {
+            color: #8B4513;
+        }
+
+        .dish-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
-        .gallery img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+        .dish-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
-        
-        .gallery img:hover {
-            transform: scale(1.03);
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('https://picsum.photos/id/1018/2000/1200');
+            background-size: cover;
+            background-position: center;
         }
-        
-        .reviews {
-            background: white;
-            border-radius: 20px;
-            padding: 50px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-        }
-        
-        .review {
-            border-bottom: 1px solid #eee;
-            padding: 25px 0;
-        }
-        
-        .review:last-child {
-            border-bottom: none;
-        }
-        
-        footer {
-            background: #2c2c2c;
-            color: #ddd;
-            text-align: center;
-            padding: 50px 20px;
+
+        .menu-section {
+            scroll-margin-top: 80px;
         }
     </style>
 </head>
-<body>
+<body class="bg-[#F8F1E9] text-[#3F2A1E]">
+    
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b border-[#EDE4D8] sticky top-0 z-50">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-9 h-9 bg-[#8B4513] rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-2xl tracking-tighter">SM</span>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-2xl tracking-tight">Le Saint M</div>
+                        <div class="text-[10px] text-[#8B4513] -mt-1">SAINT-MARTIN-DE-CRAU</div>
+                    </div>
+                </div>
+
+                <!-- Menu -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#accueil" class="nav-link">Accueil</a>
+                    <a href="#menu" class="nav-link">Menu</a>
+                    <a href="#avis" class="nav-link">Avis</a>
+                    <a href="#reservation" class="nav-link">Réservation</a>
+                </div>
+
+                <div class="flex items-center gap-x-3">
+                    <a href="#reservation" 
+                       class="hidden md:block px-5 py-2.5 bg-[#8B4513] hover:bg-[#6B3510] transition-colors text-white text-sm font-semibold rounded-full">
+                        Réserver une table
+                    </a>
+                    
+                    <!-- Mobile menu -->
+                    <button class="md:hidden w-10 h-10 flex items-center justify-center text-[#8B4513]">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- HERO -->
-    <header>
-        <div class="hero-content">
-            <h1>Le Saint M</h1>
-            <p>Restaurant • Bar • Terrasse ombragée<br>
-            Saint-Martin-de-Crau</p>
-            <a href="#reservation" class="btn">Réserver une table</a>
+    <section id="accueil" class="hero-bg h-[100dvh] flex items-center justify-center text-white relative">
+        <div class="max-w-screen-xl mx-auto px-6 text-center">
+            <div class="max-w-2xl mx-auto">
+                <div class="inline-flex items-center gap-x-2 bg-white/90 text-[#8B4513] px-4 py-1 rounded-full text-sm font-medium mb-6">
+                    <i class="fa-solid fa-map-marker-alt"></i>
+                    <span>Saint-Martin-de-Crau • Provence</span>
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl leading-none tracking-tighter font-bold mb-4 heading-serif">
+                    Le Saint M
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-md mx-auto">
+                    Une cuisine raffinée, une belle terrasse ombragée,<br>
+                    une déco moderne et lumineuse.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#menu" 
+                       class="px-8 py-4 bg-white text-[#8B4513] font-semibold rounded-full hover:bg-[#F8F1E9] transition-colors flex items-center justify-center gap-x-2">
+                        <span>Découvrir la carte</span>
+                    </a>
+                    <a href="#reservation" 
+                       class="px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-[#8B4513] transition-colors flex items-center justify-center gap-x-2">
+                        <span>Réserver une table</span>
+                    </a>
+                </div>
+                
+                <div class="mt-8 flex justify-center">
+                    <div class="flex items-center gap-x-2 text-sm">
+                        <div class="flex text-amber-400">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <span class="text-white/80">4.7/5 • 681 avis Google</span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
-
-    <!-- ABOUT -->
-    <section class="container">
-        <h2 class="section-title">Bienvenue au Saint M</h2>
-        <p style="max-width: 700px; margin: 0 auto; text-align: center; font-size: 1.25rem;">
-            Un restaurant familial au cœur de la Provence. 
-            Cuisine raffinée, terrasse ombragée et accueil chaleureux.
-        </p>
-    </section>
-
-    <!-- GALLERY -->
-    <section style="background: white;">
-        <div class="container">
-            <h2 class="section-title">La Terrasse &amp; l'Intérieur</h2>
-            <div class="gallery">
-                <img src="https://picsum.photos/id/1016/800/600" alt="Terrasse extérieure">
-                <img src="https://picsum.photos/id/1018/800/600" alt="Intérieur du restaurant">
-                <img src="https://picsum.photos/id/106/800/600" alt="Terrasse ombragée">
+        
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block">
+            <div class="animate-bounce">
+                <i class="fa-solid fa-chevron-down text-white/70 text-2xl"></i>
             </div>
         </div>
     </section>
 
-    <!-- FOOD GALLERY -->
-    <section>
-        <div class="container">
-            <h2 class="section-title">Nos Plats Signature</h2>
-            <div class="gallery">
-                <img src="https://picsum.photos/id/292/800/600" alt="Dessert signature">
-                <img src="https://picsum.photos/id/312/800/600" alt="Plat principal">
-                <img src="https://picsum.photos/id/201/800/600" alt="Dessert au chocolat">
-                <img src="https://picsum.photos/id/292/800/600" alt="Pavlova aux fraises">
+    <!-- NOTRE MAISON -->
+    <section class="max-w-screen-xl mx-auto px-6 pt-16 pb-12">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="uppercase tracking-[3px] text-xs font-semibold text-[#8B4513] mb-3">NOTRE MAISON</div>
+                <h2 class="heading-serif text-4xl md:text-5xl leading-none tracking-tight mb-6">
+                    Une table de cœur<br>au cœur de la Provence
+                </h2>
+                <div class="space-y-4 text-[15px] leading-relaxed text-[#5C4635]">
+                    <p>Au Saint M, Sophie et Damien vous accueillent dans une ambiance familiale et chaleureuse. Notre cuisine française, faite maison, met à l’honneur les produits frais et de saison du terroir provençal.</p>
+                    <p>Notre menu change chaque semaine au gré des inspirations du chef et des arrivages du marché. Une promesse simple : la générosité, la finesse, et le plaisir partagé.</p>
+                </div>
+                <div class="mt-6 italic text-[#8B4513]">
+                    « Le menu change toutes les semaines, le cuisinier est extra. » — Élodie
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- REVIEWS -->
-    <section class="container">
-        <div class="reviews">
-            <h2 class="section-title" style="margin-bottom: 30px;">Avis Google — 4,7/5 (681 avis)</h2>
             
-            <div class="review">
-                <strong>Elodie</strong> — 5/5<br>
-                <span style="color:#666;">« Rien à dire, ce restaurant est très agréable. Le menu change toutes les semaines, le cuisinier est extra. »</span>
-            </div>
-            
-            <div class="review">
-                <strong>Michele H</strong> — 5/5<br>
-                <span style="color:#666;">« Cuisine excellente et accueil vraiment sympathique. »</span>
-            </div>
-            
-            <div class="review" style="border-bottom: none;">
-                <strong>Petit Futé</strong><br>
-                <span style="color:#666;">« Plats raffinés, belle terrasse, déco moderne et lumineuse, accueil des plus sympathiques. »</span>
+            <!-- Photo intérieur -->
+            <div class="rounded-3xl overflow-hidden shadow-xl aspect-[16/10] bg-[#EDE4D8]">
+                <!-- REMPLACE PAR TA PHOTO D'INTÉRIEUR -->
+                <img src="https://picsum.photos/id/1015/1200/800" 
+                     class="w-full h-full object-cover" alt="Intérieur du restaurant Le Saint M">
             </div>
         </div>
     </section>
 
-    <!-- RESERVATION -->
-    <section id="reservation" style="background: #f8f5f0;">
-        <div class="container" style="text-align: center;">
-            <h2 class="section-title">Réservez votre table</h2>
-            <p style="font-size: 1.3rem; margin-bottom: 30px;">
-                📞 <strong>04 90 47 32 45</strong><br>
-                Ouvert du mardi au dimanche • Fermé le lundi
-            </p>
-            <a href="tel:0490473245" class="btn">Appeler maintenant</a>
+    <!-- MENU -->
+    <section id="menu" class="bg-white py-16 menu-section">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <div class="uppercase tracking-[3px] text-xs font-semibold text-[#8B4513] mb-2">À LA CARTE</div>
+                <h2 class="heading-serif text-5xl tracking-tight">Notre carte</h2>
+                <p class="mt-3 text-[#5C4635]">Carte évolutive selon les saisons et les arrivages du marché</p>
+            </div>
+
+            <!-- SPÉCIALITÉS DE LA SEMAINE -->
+            <div class="mb-14">
+                <div class="flex items-center justify-between mb-5 px-1">
+                    <div>
+                        <span class="bg-[#8B4513] text-white text-xs font-bold px-3 py-1 rounded-full">CETTE SEMAINE</span>
+                        <span class="ml-3 text-2xl font-semibold tracking-tight">Spécialités du moment</span>
+                    </div>
+                    <span class="text-xs text-[#8B4513] hidden md:block">Mise à jour : 11 février 2026</span>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-4">
+                    <!-- Spécialité 1 -->
+                    <div class="bg-[#F8F1E9] p-5 rounded-2xl">
+                        <div class="font-semibold">Filet de bœuf aux morilles</div>
+                        <div class="text-sm text-[#5C4635] mt-1">Sauce aux champignons des bois, panais glacés et lardons fumés</div>
+                    </div>
+                    <!-- Spécialité 2 -->
+                    <div class="bg-[#F8F1E9] p-5 rounded-2xl">
+                        <div class="font-semibold">Suprême de volaille aux morilles</div>
+                        <div class="text-sm text-[#5C4635] mt-1">Crème de morilles, frites de panais maison</div>
+                    </div>
+                    <!-- Spécialité 3 -->
+                    <div class="bg-[#F8F1E9] p-5 rounded-2xl">
+                        <div class="font-semibold">Quenelle de veau</div>
+                        <div class="text-sm text-[#5C4635] mt-1">Sauce suprême, écrasé de pommes de terre et carottes fanes</div>
+                    </div>
+                </div>
+                <p class="text-[10px] text-center text-[#8B4513] mt-3">→ Pour modifier les spécialités de la semaine, il suffit de changer le texte ci-dessus</p>
+            </div>
+
+            <!-- Plats signature -->
+            <div class="mb-12">
+                <h3 class="font-semibold text-xl mb-5 px-1">Nos plats signature</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Plat 1 -->
+                    <div class="dish-card bg-white border border-[#EDE4D8] rounded-2xl overflow-hidden">
+                        <img src="https://picsum.photos/id/292/600/400" class="w-full h-52 object-cover" alt="Filet de bœuf aux morilles">
+                        <div class="p-5">
+                            <div class="font-semibold">Filet de bœuf aux morilles</div>
+                            <div class="text-sm text-[#5C4635] mt-1">Sauce aux champignons des bois, panais glacés et lardons fumés</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Plat 2 -->
+                    <div class="dish-card bg-white border border-[#EDE4D8] rounded-2xl overflow-hidden">
+                        <img src="https://picsum.photos/id/312/600/400" class="w-full h-52 object-cover" alt="Suprême de volaille">
+                        <div class="p-5">
+                            <div class="font-semibold">Suprême de volaille aux morilles</div>
+                            <div class="text-sm text-[#5C4635] mt-1">Crème de morilles, frites de panais maison</div>
+                        </div>
+                    </div>
+                    
+                    <div class="dish-card bg-white border border-[#EDE4D8] rounded-2xl overflow-hidden">
+                        <img src="https://picsum.photos/id/1060/600/400" class="w-full h-52 object-cover" alt="Quenelle de veau">
+                        <div class="p-5">
+                            <div class="font-semibold">Quenelle de veau</div>
+                            <div class="text-sm text-[#5C4635] mt-1">Sauce suprême, écrasé de pommes de terre et carottes fanes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div>
+                <h3 class="font-semibold text-xl mb-5 px-1">Les desserts maison</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="dish-card bg-white border border-[#EDE4D8] rounded-2xl p-5">
+                        <div class="font-semibold">Éclair revisité au café</div>
+                        <div class="text-sm text-[#5C4635] mt-1">Mousse café, meringues vanillées et caramel beurre salé</div>
+                    </div>
+                    <div class="dish-card bg-white border border-[#EDE4D8] rounded-2xl p-5">
+                        <div class="font-semibold">Sablé breton aux fraises</div>
+                        <div class="text-sm text-[#5C4635] mt-1">Fraises de Provence, chantilly basilic et coulis de fruits rouges</div>
+                    </div>
+                    <div class="dish-card bg-white border border-[#EDE4D8] rounded-2xl p-5">
+                        <div class="font-semibold">Tiramisu en verrine</div>
+                        <div class="text-sm text-[#5C4635] mt-1">Le grand classique italien, crème mascarpone et cacao amer</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <p><strong>Le Saint M</strong> — 6 Avenue de la République, 13310 Saint-Martin-de-Crau</p>
-        <p>© 2026 — Restaurant familial en Provence</p>
+    <!-- AVIS -->
+    <section id="avis" class="max-w-screen-xl mx-auto px-6 py-16 menu-section">
+        <div class="text-center mb-10">
+            <div class="uppercase tracking-[3px] text-xs font-semibold text-[#8B4513] mb-2">ILS EN PARLENT</div>
+            <h2 class="heading-serif text-4xl tracking-tight">Ce que nos clients disent</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Avis 1 -->
+            <div class="bg-white p-6 rounded-2xl border border-[#EDE4D8]">
+                <div class="flex text-amber-400 mb-3">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-[#5C4635]">« Rien à dire, ce restaurant est très agréable. Le menu change toutes les semaines, le cuisinier est extra. »</p>
+                <div class="mt-4 text-sm">
+                    <span class="font-semibold">Élodie</span><br>
+                    <span class="text-xs text-[#8B4513]">Avis Google • il y a 5 mois</span>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-[#EDE4D8]">
+                <div class="flex text-amber-400 mb-3">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-[#5C4635]">« C’est la première fois que nous venions déjeuner dans ce beau restaurant. Cuisine excellente et accueil vraiment sympathique. »</p>
+                <div class="mt-4 text-sm">
+                    <span class="font-semibold">Michele H</span><br>
+                    <span class="text-xs text-[#8B4513]">Avis Google • il y a 2 mois</span>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-[#EDE4D8]">
+                <div class="flex text-amber-400 mb-3">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-[#5C4635]">« Les plats sont raffinés, l’endroit bénéficie d’une belle terrasse, d’une déco moderne et lumineuse, et l’accueil est des plus sympathiques. »</p>
+                <div class="mt-4 text-sm">
+                    <span class="font-semibold">Auteur Petit Futé</span><br>
+                    <span class="text-xs text-[#8B4513]">Avis vérifié</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-8">
+            <a href="https://www.google.com/search?q=Le+Saint+M+Saint-Martin-de-Crau" target="_blank"
+               class="inline-flex items-center gap-x-2 text-sm font-medium text-[#8B4513] hover:underline">
+                Voir tous les avis sur Google <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- RÉSERVATION + GOOGLE MAPS -->
+    <section id="reservation" class="bg-[#3F2A1E] text-white py-16 menu-section">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-x-16 gap-y-12">
+                
+                <!-- Infos réservation -->
+                <div>
+                    <div class="uppercase tracking-[3px] text-xs font-semibold text-[#C9A17A] mb-3">RÉSERVATION</div>
+                    <h2 class="heading-serif text-5xl tracking-tight mb-6">Réservez votre table</h2>
+                    
+                    <p class="text-[#C9A17A] mb-8 max-w-md">
+                        Pour toute réservation, n’hésitez pas à nous appeler. Nous serons ravis de vous accueillir sur notre terrasse ombragée ou dans notre salle lumineuse.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div>
+                            <div class="text-sm text-[#C9A17A] mb-1">TÉLÉPHONE</div>
+                            <a href="tel:0490473245" class="text-2xl font-semibold hover:text-[#C9A17A] transition-colors">04 90 47 32 45</a>
+                        </div>
+                        
+                        <div>
+                            <div class="text-sm text-[#C9A17A] mb-1">ADRESSE</div>
+                            <div>6 Avenue de la République<br>13310 Saint-Martin-de-Crau</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps -->
+                <div>
+                    <div class="rounded-3xl overflow-hidden shadow-2xl aspect-video border border-white/10">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.8!2d4.812!3d43.58!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b5e5e5e5e5e5e5%3A0x1234567890abcdef!2s6+Avenue+de+la+R%C3%A9publique%2C+13310+Saint-Martin-de-Crau!5e0!3m2!1sfr!2sfr!4v1700000000000"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <p class="text-center text-xs text-[#C9A17A] mt-3">Cliquez sur la carte pour ouvrir dans Google Maps</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#2C2118] text-[#C9A17A] py-8 text-sm">
+        <div class="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-y-4 text-center md:text-left">
+            <div>© 2026 Le Saint M • Saint-Martin-de-Crau</div>
+            <div class="flex gap-x-6">
+                <a href="#" class="hover:text-white transition-colors">Mentions légales</a>
+                <a href="#" class="hover:text-white transition-colors">CGU</a>
+            </div>
+        </div>
     </footer>
 
 </body>
